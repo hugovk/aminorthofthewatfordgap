@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Am I south of the Watford Gap?</title>
+<title>Am I north of the Watford Gap?</title>
 <style>
 html {
   overflow-y: scroll;
@@ -26,7 +26,7 @@ h2 {
 }
 </style>
 
-<h2>Am I south of the Watford Gap?</h2>
+<h2>Am I north of the Watford Gap?</h2>
 
 <h1><span id="live-geolocation"></span></h1>
 
@@ -37,7 +37,7 @@ function lookup_location() {
   geoPosition.getCurrentPosition(show_answer, show_answer_error);
 }
 function show_answer(loc) {
-  if (loc.coords.latitude < 52.306) {
+  if (loc.coords.latitude > 52.306) {
     $("#live-geolocation").html('Yes.');
   }
   else {
